@@ -92,10 +92,10 @@ class Character:
         # Reduce self.health by damage amount
         # Make sure health doesn't go below 0
         self.damage = damage
-        if (self.health - self.damage) <= 0:
+        if (self.health - damage) <= 0:
             self.health = 0
         else:
-            self.health = self.health - self.damage
+            self.health = self.health - damage
         return self.health
 
         
@@ -160,7 +160,7 @@ class Warrior(Player):
         # Should do more damage than basic attack
         # Maybe strength + 5 bonus damage?
         damage = self.strength * 2
-        Character.take_damage(target)
+        Player.take_damage(self,damage)
 
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
