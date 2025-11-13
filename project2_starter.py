@@ -160,7 +160,7 @@ class Warrior(Player):
         # Should do more damage than basic attack
         # Maybe strength + 5 bonus damage?
         damage = self.strength * 2
-        Character.take_damage(damage)
+        Character.take_damage(target)
 
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
