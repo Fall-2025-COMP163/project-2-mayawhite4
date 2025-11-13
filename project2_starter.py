@@ -80,7 +80,7 @@ class Character:
         # Damage should be based on self.strength
         # Use target.take_damage(damage) to apply damage
         damage = self.strength * self.magic
-        self.target = self.take_damage(damage)
+        target.take_damage(damage)
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
     def take_damage(self, damage):
@@ -161,7 +161,7 @@ class Warrior(Player):
         # Should do more damage than basic attack
         # Maybe strength + 5 bonus damage?
         damage = self.strength * 2
-        Player.take_damage(self,damage)
+        target.take_damage(damage)
 
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
@@ -172,7 +172,7 @@ class Warrior(Player):
         # TODO: Implement power strike
         # Should do significantly more damage than regular attack
         damage = (self.strength ** 2) * self.magic
-        self.target = self.take_damage(damage)
+        target.take_damage(damage)
         return print(f"You've used power strike and inflicted {damage} amount of damage on your opponent.")
 
 class Mage(Player):
@@ -198,7 +198,7 @@ class Mage(Player):
         # TODO: Implement mage attack
         # Should use self.magic for damage calculation instead of strength
         damage = self.magic * 2
-        self.target = self.take_damage(damage)
+        target.take_damage(damage)
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
     def fireball(self, target):
@@ -208,7 +208,7 @@ class Mage(Player):
         # TODO: Implement fireball spell
         # Should do magic-based damage with bonus
         damage = (self.magic ** 2) * (self.strength)
-        self.target = self.take_damage(damage)
+        target.take_damage(damage)
         return print(f"You've used fireball and inflicted {damage} amount of damage on your opponent.")
 
 class Rogue(Player):
@@ -236,10 +236,10 @@ class Rogue(Player):
         # Hint: use random.randint(1, 10) and if result <= 3, it's a crit
         if random.randint(1,10) <= 3:
             damage = (self.strength * 2) * (self.magic * 2)
-            self.target = self.take_damage(damage)
+            target.take_damage(damage)
         else:
             damage = self.strength *self.magic
-            self.target = self.take_damage(damage)
+            target.take_damage(damage)
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
     def sneak_attack(self, target):
@@ -249,7 +249,7 @@ class Rogue(Player):
         # TODO: Implement sneak attack
         # Should always do critical damage
         damage = (self.strength * 2) * (self.magic * 2)
-        self.target = self.take_damage(damage)
+        target.take_damage(damage)
         return print(f"You've used sneak attack and inflicted {damage} amount of damage on your opponent.")
 
 class Weapon:
