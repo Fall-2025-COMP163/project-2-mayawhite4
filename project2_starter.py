@@ -113,7 +113,7 @@ class Player(Character):
     Inherits from Character and adds player-specific features.
     """
     
-    def __init__(self, name, health, strength, magic,character_class="Warrior"):
+    def __init__(self, name, health, strength, magic, character_class="Warrior"):
         """
         Initialize a player character.
         Should call the parent constructor and add player-specific attributes.
@@ -160,7 +160,8 @@ class Warrior(Player):
         # Should do more damage than basic attack
         # Maybe strength + 5 bonus damage?
         damage = self.strength * 2
-        self.target = self.take_damage(damage)
+        Character.take_damage(damage)
+
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
     def power_strike(self, target):
@@ -280,15 +281,18 @@ if __name__ == "__main__":
     print("Testing inheritance, polymorphism, and method overriding")
     print("=" * 50)
     #Testing the Character Class
-    five = Character()
-    five.attack("warrior")
-    two = Player(100,20,20,20)
-    two.display_stats()
+
     # TODO: Create one of each character type
     warrior = Warrior("Sir Galahad")
     mage = Mage("Merlin")
     rogue = Rogue("Robin Hood")
-    
+
+    warrior = Warrior("WorkingWarrior")
+    target = Character("Target", 100, 0, 0)
+
+    original_health = target.health
+    warrior.attack(target)
+
     # TODO: Display their stats
     # print("\n📊 Character Stats:")
     # warrior.display_stats()
