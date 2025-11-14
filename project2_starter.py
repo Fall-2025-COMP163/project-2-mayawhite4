@@ -114,7 +114,7 @@ class Player(Character):
     Inherits from Character and adds player-specific features.
     """
     
-    def __init__(self, name, health, strength, magic, character_class="Warrior"):
+    def __init__(self, name, health, strength, magic, character_class):
         """
         Initialize a player character.
         Should call the parent constructor and add player-specific attributes.
