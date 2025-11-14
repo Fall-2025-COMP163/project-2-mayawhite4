@@ -236,10 +236,10 @@ class Rogue(Player):
         # Could add a chance for critical hit (double damage)
         # Hint: use random.randint(1, 10) and if result <= 3, it's a crit
         if random.randint(1,10) <= 3:
-            damage = (self.strength * 2) * (self.magic * 2)
+            damage = self.strength * (self.magic // 2)
             target.take_damage(damage)
         else:
-            damage = self.strength *self.magic
+            damage = (self.strength//2) * (self.magic//2)
             target.take_damage(damage)
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
@@ -249,7 +249,7 @@ class Rogue(Player):
         """
         # TODO: Implement sneak attack
         # Should always do critical damage
-        damage = (self.strength//2) * (self.magic//2)
+        damage = self.strength * (self.magic//2)
         target.take_damage(damage)
         return print(f"You've used sneak attack and inflicted {damage} amount of damage on your opponent.")
 
