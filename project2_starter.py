@@ -143,7 +143,7 @@ class Warrior(Player):
     Inherits from Player.
     """
     
-    def __init__(self, name, health=120, strength=15, magic=5, character_class):
+    def __init__(self, name, health=120, strength=15, magic=5):
         """
         Create a warrior with appropriate stats.
         Warriors should have: high health, high strength, low magic
@@ -151,8 +151,7 @@ class Warrior(Player):
         # TODO: Call super().__init__() with warrior-appropriate stats
         # Suggested stats: health=120, strength=15, magic=5
         Player.__init__(self, name, health, strength, magic)
-        self.character_class = character_class
-        
+
     def attack(self, target):
         """
         Override the basic attack to make it warrior-specific.
@@ -183,7 +182,7 @@ class Mage(Player):
     Inherits from Player.
     """
     
-    def __init__(self, name, character_class):
+    def __init__(self, name):
         """
         Create a mage with appropriate stats.
         Mages should have: low health, low strength, high magic
@@ -192,8 +191,7 @@ class Mage(Player):
         # Suggested stats: health=80, strength=8, magic=20
         Player.__init__(self, name, health=80, strength=8, magic=20)
         self.name = name
-        self.character_class = character_class
-        
+
     def attack(self, target):
         """
         Override the basic attack to make it magic-based.
@@ -221,7 +219,7 @@ class Rogue(Player):
     Inherits from Player.
     """
     
-    def __init__(self, name, character_class):
+    def __init__(self, name):
         """
         Create a rogue with appropriate stats.
         Rogues should have: medium health, medium strength, medium magic
@@ -229,7 +227,6 @@ class Rogue(Player):
         # TODO: Call super().__init__() with rogue-appropriate stats
         # Suggested stats: health=90, strength=12, magic=10
         Player.__init__(self, name, health=90, strength=12, magic=10)
-        self.character_class = character_class
 
     def attack(self, target):
         """
