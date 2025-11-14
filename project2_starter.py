@@ -190,6 +190,7 @@ class Mage(Player):
         # TODO: Call super().__init__() with mage-appropriate stats
         # Suggested stats: health=80, strength=8, magic=20
         Player.__init__(self, name, health=80, strength=8, magic=20)
+        self.name = name
         
     def attack(self, target):
         """
