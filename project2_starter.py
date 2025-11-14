@@ -143,7 +143,7 @@ class Warrior(Player):
     Inherits from Player.
     """
     
-    def __init__(self, name, health=120, strength=15, magic=5, character_class):
+    def __init__(self, name, character_class, health=120, strength=15, magic=5):
         """
         Create a warrior with appropriate stats.
         Warriors should have: high health, high strength, low magic
@@ -182,7 +182,7 @@ class Mage(Player):
     Inherits from Player.
     """
     
-    def __init__(self, name, health, strength, magic, character_class):
+    def __init__(self, name, character_class, health=80, strength=8, magic=20):
         """
         Create a mage with appropriate stats.
         Mages should have: low health, low strength, high magic
@@ -218,7 +218,7 @@ class Rogue(Player):
     Inherits from Player.
     """
     
-    def __init__(self, name, health=90, strength=12, magic=10, character_class):
+    def __init__(self, name, character_class, health=90, strength=12, magic=10):
         """
         Create a rogue with appropriate stats.
         Rogues should have: medium health, medium strength, medium magic
