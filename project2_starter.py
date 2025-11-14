@@ -249,7 +249,7 @@ class Rogue(Player):
         """
         # TODO: Implement sneak attack
         # Should always do critical damage
-        damage = self.strength * self.magic
+        damage = (self.strength//2) * (self.magic//2)
         target.take_damage(damage)
         return print(f"You've used sneak attack and inflicted {damage} amount of damage on your opponent.")
 
