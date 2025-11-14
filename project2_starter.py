@@ -3,7 +3,7 @@ COMP 163 - Project 2: Character Abilities Showcase
 Name: Maya White
 Date: 11/10/25
 
-AI Usage: [Document any AI assistance used]
+AI Usage: I used AI to help me understand why I got an error
 Example: AI helped with inheritance structure and method overriding concepts
 """
 
