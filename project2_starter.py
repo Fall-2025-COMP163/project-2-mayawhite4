@@ -208,7 +208,7 @@ class Mage(Player):
         """
         # TODO: Implement fireball spell
         # Should do magic-based damage with bonus
-        damage = (self.magic ** 2) * (self.strength)
+        damage = self.magic * 3
         target.take_damage(damage)
         return print(f"You've used fireball and inflicted {damage} amount of damage on your opponent.")
 
@@ -249,7 +249,7 @@ class Rogue(Player):
         """
         # TODO: Implement sneak attack
         # Should always do critical damage
-        damage = (self.strength * 2) * (self.magic * 2)
+        damage = self.strength * self.magic
         target.take_damage(damage)
         return print(f"You've used sneak attack and inflicted {damage} amount of damage on your opponent.")
 
