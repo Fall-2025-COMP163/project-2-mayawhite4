@@ -145,3 +145,12 @@ Feel free to add your own creative touches for bonus points:
 - Additional character classes beyond the three required
 - More weapon types with different properties
 - Enhanced special abilities with unique effects
+
+## Bonus Creative Features 
+I didn't really add anything unique. I just did the standard that was required for the code.
+
+## AI Usage
+I used AI to help me understand why I got the errors I got. 
+
+## How to Run
+How to run my code is you have to create an instance of the character class for the target. Then you create an instance for whichever class type you want such as Warrior or Mage. After you create an instance you can then use one of the attack powers such as fireball for mage and attack the target you just initialized. Which will cause the target to take damage. 
