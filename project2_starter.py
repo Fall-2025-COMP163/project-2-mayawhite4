@@ -161,7 +161,7 @@ class Warrior(Player):
         # TODO: Implement warrior attack
         # Should do more damage than basic attack
         # Maybe strength + 5 bonus damage?
-        damage = self.strength * 2
+        damage = self.strength + 10
         target.take_damage(damage)
 
         return print(f"You inflicted {damage} amount of damage on your opponent.")
@@ -172,7 +172,7 @@ class Warrior(Player):
         """
         # TODO: Implement power strike
         # Should do significantly more damage than regular attack
-        damage = (self.strength ** 2) * self.magic
+        damage = self.strength * 2
         target.take_damage(damage)
         return print(f"You've used power strike and inflicted {damage} amount of damage on your opponent.")
 
@@ -198,7 +198,7 @@ class Mage(Player):
         """
         # TODO: Implement mage attack
         # Should use self.magic for damage calculation instead of strength
-        damage = self.magic * 2
+        damage = self.magic + 10
         target.take_damage(damage)
         return print(f"You inflicted {damage} amount of damage on your opponent.")
         
@@ -208,7 +208,7 @@ class Mage(Player):
         """
         # TODO: Implement fireball spell
         # Should do magic-based damage with bonus
-        damage = self.magic * 3
+        damage = self.magic * 2
         target.take_damage(damage)
         return print(f"You've used fireball and inflicted {damage} amount of damage on your opponent.")
 
